@@ -1,0 +1,195 @@
+body{
+    background-color: #03192b;
+    color: white;
+    font-family: 'Audiowide', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    
+}
+header h1{
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 350px;
+    margin: 20px;
+    color: white;
+}
+
+button{
+    width: 200px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    font-family: 'Audiowide', cursive;
+    font-size: 19px;
+    margin:10px;
+
+}
+button:hover{
+    background-color: #309b1d;
+    cursor: pointer;
+}
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+  }
+  .border-gradient-vice {
+    border-image-source: linear-gradient(to right, #0bd3d3, #fa46dc);
+  }
+.out{
+    color: #fa46dc
+    
+}
+.cell.out{ color: #fa46dc}
+.in{
+    color:#0bd3d3
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 30px;
+    width: 100px;
+}
+#user-one-info{
+    color: #0bd3d3
+}#user-two-info{
+    color: #fa46dc
+}
+.user-name{
+    margin-top: -100%;
+    margin-bottom: 100%;
+}
+.user-name.active{
+    color:yellow;
+}
+.gameboard-container{
+    display: flex;
+    align-items: center;
+    
+}
+.gameboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative; 
+    width: 426px;
+    height: 426px;
+    border: 2px solid black; 
+    margin: 20px;
+    margin-left:100px;
+    margin-right:100px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #0bd3d3, #fa46dc);
+    
+}
+.cell{
+    width: 33.333%;
+    height: 33.33%;
+    border: 2px solid #1d269b;
+    color:#0bd3d3;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 350%;
+    background-color: rgb(0, 0, 0);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 5) 6s;
+    
+}
+.cell:hover{
+    cursor:cell;
+ background-color: rgba(0, 0, 0, 0.856);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1); 
+}
+.cell.wipe{
+    background-color: rgba(0, 0, 0, 0.521);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.new-match{
+    font-size: 100%;
+    position:absolute;
+    transform: translate(-50%, -50%) scale(0);
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s; 
+    width:100%;
+    height: 100%;   
+}
+.new-match form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+.new-match.active{
+    position:absolute;
+    transform: translate(-50%, -50%);
+    transform: scale(1);
+     
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s; 
+    background-color: rgba(0, 0, 0, 0.74);
+}
+#cancel-button{
+    display:none;
+}
+#cancel-button.active{
+    display: flex;
+}
+.dropdowns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:50px;
+    font-size: 20px;
+}
+.dropdown select{
+    width: 150%;
+    color:white;
+    background-color: black;
+    font-size: 100%;
+    opacity: 2;
+}
+
+#add-player{
+    box-sizing: border-box;
+    padding: 15%;
+}
+#add-player form label {
+    font-size: 120%;
+}
+
+input {
+    background-color: black;
+    color: white;
+    font-family: 'Audiowide', cursive;
+    font-size: 130%;
+}
+#errmsg{
+    color: red;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px){
+    html{
+        transform: scale(.8);
+    }
+    
+}

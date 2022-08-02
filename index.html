@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/animator.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header id = "title">
+        <h1>
+            <div class="in">Tic</div>
+            <div class="out">Tac</div>
+            <div class="in">Toe</div>
+        </h1>
+    </header>
+    <div class="buttons">
+        <button id="new-match-button" class="border-gradient border-gradient-vice">Change Players</button>
+        <button id="play-again-button" class="border-gradient border-gradient-vice">Play Again</button>
+    </div>
+    <div class="gameboard-container">
+        <div class="user-info" id="user-one-info">
+            <div class="user-name" id="user-one-name">
+                <h2>User1</h2>
+
+            </div>
+            <div class="user-score" id="user-one-score">0</div>
+        </div>
+        <div class="gameboard" id="gameboard">
+
+            <div class="cell" data-column="0" data-row="0" id="0"></div>
+            <div class="cell" data-column="1" data-row="0" id="1"></div>
+            <div class="cell" data-column="2" data-row="0" id="2"></div>
+            <div class="cell" data-column="0" data-row="1" id="3"></div>
+            <div class="cell" data-column="1" data-row="1" id="4"></div>
+            <div class="cell" data-column="2" data-row="1" id="5"></div>
+            <div class="cell" data-column="0" data-row="2" id="6"></div>
+            <div class="cell" data-column="1" data-row="2" id="7"></div>
+            <div class="cell" data-column="2" data-row="2" id="8"></div>
+
+
+            <div id="new-match" class="new-match active border-gradient border-gradient-vice ">
+                <form id="choose-players" autocomplete="off">
+
+                    <div class="dropdowns">
+                        <div class="dropdown">
+                            <label for="choose-player1">Player 1:</label>
+                            <br>
+                            <select name="choose-player1" id="sort-select" class=" select border-gradient border-gradient-vice">
+                                <option hidden disabled selected value> -- select -- </option>
+                                
+                                
+                            </select>
+                        </div>
+                        <br><br>
+                        <div class="dropdown">
+                            <label for="choose-player2">Player 2:</label>
+                            <br>
+                            <select name="choose-player2" id="sort-select" class="select border-gradient border-gradient-vice">                            
+                                <option hidden disabled selected value> -- select -- </option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="fight" id = "fight">
+                        <button type="submit" id="fight-button" value="on/off">Start!</button>
+                        <button id="newplayer">+ new player</button>
+                        <button type="submit" id="cancel-button" class = ""value="on/off">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div id="add-player" class="new-match border-gradient border-gradient-vice ">
+                <form autocomplete="off" action="">
+                    <label for="new-player">Enter a player name:</label> 
+                    <br><br>
+                    <input id="new-player" type="text" class = "border-gradient border-gradient-vice">
+                    <br><br>
+                    <button type="submit" id = "add-player-bttn" ">Add Player</button>
+                    <button id="cancel-add">Cancel</button>
+                </form>
+                <div id="errmsg"> </div>
+            </div>
+        </div>
+        <div class="user-info" id="user-two-info">
+            <div class="user-name" id="user-two-name">User2</div>
+            <div class="user-score" id="user-two-score">0</div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
